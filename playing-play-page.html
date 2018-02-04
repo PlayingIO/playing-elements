@@ -1,0 +1,55 @@
+<!--
+`playing-play-page`
+@group Playing UI
+@element playing-play-page
+-->
+<dom-module id="playing-play-page">
+  <template>
+    <template is="dom-if" if="[[visible]]">
+      <iron-pages selected="{{selected}}" attr-for-selected="name" fallback-selection="error" selected-attribute="visible">
+
+        <mostly-slot slot="PLAY_PAGES" model="[[actionContext]]"></mostly-slot>
+
+      </iron-pages>
+    </template>
+  </template>
+  <script>
+    Polymer({
+      is: 'playing-play-page',
+      behaviors: [Mostly.I18nBehavior],
+      properties: {
+        visible: Boolean,
+
+        selected: {
+          type: String,
+          value: 'analytics',
+          notify: true,
+          observer: '_checkError'
+        },
+
+        isAdministrator: {
+          type: Boolean,
+          value: false,
+          reflectToAttribute: true
+        },
+
+        entity: Object
+      },
+
+      _actionContext: function() {
+        return {entity: this.entity};
+      },
+
+      _errorUrl: function() {
+        return window.location.href;
+      },
+
+      _checkError: function() {
+        // XXX: removed fallback-selection="error"
+        if (this.selected === 'error') {
+          this.fire('error', {code: 404});
+        }
+      }
+    });
+  </script>
+</dom-module>
