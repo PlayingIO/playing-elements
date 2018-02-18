@@ -49,7 +49,7 @@
         margin-left: 1em;
       }
 
-      paper-button iron-icon {
+      .actions paper-button iron-icon {
         width: 1.3rem;
         margin-right: .5rem;
       }
@@ -60,6 +60,60 @@
         font-size: .8rem;
         margin-left: 10px;
         text-decoration: underline;
+      }
+
+      .dropdown {
+        position: absolute;
+        right: 0;
+        padding: 0;
+        top: 15px;
+      }
+
+      paper-menu-button.dropdown {
+        width: 130px;
+        height: 48px;
+        margin-bottom: 16px;
+      }
+
+      .dropdown paper-button {
+        width: 100%;
+      }
+
+      .dropdown paper-button iron-icon {
+        padding-right: 8px;
+      }
+
+      .dropdown paper-listbox {
+        width: 130px;
+        outline: none;
+      }
+
+      .dropdown paper-icon-item {
+        --paper-item-icon-width: 30px;
+      }
+
+      .dropdown paper-listbox paper-icon-item iron-icon {
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+
+      .dropdown paper-listbox paper-icon-item:hover {
+        background: var(--mostly-container-hover, #fafafa);
+        cursor: pointer;
+      }
+
+      .createButton {
+        position: absolute;
+        right: 0;
+        padding: 0;
+        top: 15px;
+        width: 130px;
+        height: 43px;
+        margin-bottom: 16px;
+      }
+
+      paper-button.createButton iron-icon {
+        padding-right: 8px;
       }
 
       paper-dialog {
