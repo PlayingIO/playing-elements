@@ -3,6 +3,80 @@
 <dom-module id="playing-styles">
   <template>
     <style include="lyfe-icons">
+      [hidden] {
+        display: none !important;
+      }
+
+      label {
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+
+      .header {
+        @apply --layout-start;
+        padding: 0px;
+      }
+
+      .header .backButton {
+        color: var(--mostly-button-primary, #00adff);
+      }
+
+      .header .name {
+        margin: 10px 0 5px 5px;
+      }
+
+      .header .subname {
+        font-weight: normal;
+        margin: 0 0 0 5px;
+      }
+
+      .header .icon {
+        margin-top: 8px;
+      }
+
+      .form-buttons {
+        color: var(--mostly-button-primary, #00adff);
+      }
+
+      .actions {
+        @apply --layout-horizontal;
+        @apply --layout-flex;
+        @apply --layout-center;
+        @apply --layout-end-justified;
+      }
+
+      .actions paper-button {
+        margin-left: 1em;
+      }
+
+      paper-button iron-icon {
+        width: 1.3rem;
+        margin-right: .5rem;
+      }
+
+      .remove {
+        color: red;
+        cursor: pointer;
+        font-size: .8rem;
+        margin-left: 10px;
+        text-decoration: underline;
+      }
+
+      paper-dialog {
+        min-width: 400px;
+        padding-top: 24px;
+      }
+
+      .buttons {
+        @apply --buttons-bar;
+        margin-top: 2em;
+      }
+
+      .confirm {
+        padding: 2em;
+        font-size: 1.1rem;
+      }
+
       .fade-6 {
         opacity: 0.6;
       }
