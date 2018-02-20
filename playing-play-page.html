@@ -33,11 +33,16 @@
           reflectToAttribute: true
         },
 
+        actionContext: {
+          type: Object,
+          computed: '_actionContext(user, entity)'
+        },
+
         entity: Object
       },
 
       _actionContext: function() {
-        return {entity: this.entity};
+        return {user: this.user, entity: this.entity};
       },
 
       _errorUrl: function() {
