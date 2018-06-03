@@ -1,7 +1,7 @@
 Playing Common Web Components
 =============================
 
-Playing common management web components for playful applications.
+Playing common management web components for building playful applications.
 
 # Usage
 

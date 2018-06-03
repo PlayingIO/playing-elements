@@ -1,6 +1,6 @@
 {
   "name": "playing-elements",
-  "description": "Playing common web components for playful applications",
+  "description": "Playing common web components for building playful applications",
   "version": "1.0.2",
   "license": "MIT",
   "devDependencies": {
